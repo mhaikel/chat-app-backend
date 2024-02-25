@@ -20,7 +20,7 @@ LABEL maintainer="Michael Abah"
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends curl \
 	&& rm -rf /var/lib/apt/lists/*
-RUN useradd -d /home/gotrah -m -s /bin/bash abah
+RUN useradd -d /home/abah -m -s /bin/bash abah
 USER abah
 WORKDIR /application
 COPY --from=builder /application/dependencies/ ./
